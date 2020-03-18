@@ -8,6 +8,7 @@
     left: 0;
     border-bottom: 1px solid #eee;
     box-shadow: 0 1px 3px #eee;
+    z-index: 1;
 }
 ol {
     list-style-type:none;
@@ -94,5 +95,11 @@ ol > li > ul > li > button {
 @media (max-width: 530px) {
     ol {
         right: 0;
+        left: 0;
+    }
+}
+@media (max-height: 500px) {
+    .Nav {
+        margin-top: 50px;
     }
 }

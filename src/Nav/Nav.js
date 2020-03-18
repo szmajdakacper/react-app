@@ -13,7 +13,7 @@ export default function Nav(props) {
                     ))}
                 </ul>
             </li>
-            <li><button onClick={props.addNewProduct} key='mainButton' className={styleClasses.mainButton}>Add New Product</button></li>
+            <li><button onClick={props.addNewProductHandler} key='mainButton' className={styleClasses.mainButton}>Add New Product</button></li>
         </ol>
     );
     return (

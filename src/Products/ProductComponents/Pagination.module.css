@@ -1,5 +1,4 @@
 .PaginationContainer {
-    width: 500px;
     margin: auto;
 }
 .Pagination {
@@ -23,3 +22,9 @@
   }
   
   .Pagination button:hover:not(.active) {background-color: #ddd;}
+
+  @media (max-width: 600px) {
+    .Pagination button {
+      width: 100%;
+    }
+  }

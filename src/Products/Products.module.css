@@ -11,16 +11,34 @@
 .productStyle:hover {
     background-color: rgba(230, 255, 230, 0.9);
 }
+.edit {
+    visibility: hidden;
+    position: absolute;
+    margin-left: -20px;
+    cursor: pointer;
+    font-size: 15px;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 1px 18px;
+    color: black;
+    display: inline-block;
+    text-align: center;
+    z-index: 0;
+}
+.productStyle:hover .edit {
+    background-color: rgba(0, 0, 255, 0.1);
+    visibility: visible;
+}
 .nameStyle {
     height: 50px;
     border-bottom: 1px solid #ccc;
     text-align: center;
 }
 .nameStyle p {
-    width: 90%;
+    width: 70%;
     display: inline-block;
 }
-.nameStyle span {
+.nameStyle .close {
     cursor: pointer;
     font-size: 40px;
     color: red;

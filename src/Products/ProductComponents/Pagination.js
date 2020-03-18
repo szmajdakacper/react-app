@@ -6,6 +6,12 @@ const Pagination = (props) => {
     const beforCurrentPage = currentPage - 1;
     const afterCurrentPage = currentPage + 1;
     let moreThanSevenPages = false;
+
+    if (props.totalPages <= 1) {
+        return '';
+    }
+
+    //Define number of pages in chosen category
     const pageNumbers = [];
     for (let i = 1; i <= props.totalPages; i++) {
         pageNumbers.push(i);
@@ -13,8 +19,18 @@ const Pagination = (props) => {
             moreThanSevenPages = true;
         }
     }
+
+    // Set active class for current page
     const activeClass = new Array(pageNumbers.length);
     activeClass[currentPage] = styleClasses.active;
+
+    // Pagination has four diffrent looks:
+    // a) is more pages than 7:
+    // 1. current page is lesser than 4
+    // 2. current page is one of lasts page (current page is > lastPage - 4)
+    // 3. current page is bigger than 4 and smaller than (lastPage - 4)
+    // b) 
+    // 4. if is less than 7 pages
     if (moreThanSevenPages) {
         const lastPage = pageNumbers.length;
         if (currentPage < 4) {
